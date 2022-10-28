@@ -21,7 +21,7 @@ export class Modal extends React.Component {
   };
   render() {
     const { isActiveImage, images } = this.props;
-    const activeImage = images?.find(image => image.id === isActiveImage);
+    const activeImage = images?.find(image => image.id === Number(isActiveImage));
     return (
       <div onClick={this.handleModalClose} className={css.backdrop}>
         <div className={css.modal}>
